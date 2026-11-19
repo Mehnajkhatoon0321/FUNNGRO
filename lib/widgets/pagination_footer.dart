@@ -109,11 +109,34 @@ class PaginationFooter extends StatelessWidget {
 
     if (hasReachedEnd) {
       return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 24.0),
+        padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 20.0),
         child: Center(
-          child: Text(
-            '${AppStrings.endOfListMessage} ($totalCount projects)',
-            style: AppTextStyles.footerStatus,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+            decoration: BoxDecoration(
+              color: const Color(0xFFF1F5F9),
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: const Color(0xFFE2E8F0)),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(
+                  Icons.check_circle_rounded,
+                  size: 16,
+                  color: Color(0xFF10B981),
+                ),
+                const SizedBox(width: 8),
+                Text(
+                  'No more data available ($totalCount items loaded)',
+                  style: const TextStyle(
+                    fontSize: 12.5,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF64748B),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       );

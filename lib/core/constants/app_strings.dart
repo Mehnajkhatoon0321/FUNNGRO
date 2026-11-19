@@ -36,7 +36,7 @@ class AppStrings {
   static const String noProjectsAvailable =
       'No projects available at the moment.';
   static const String retry = 'Retry';
-  static const String endOfListMessage = '✓ You have reached the end';
+  static const String endOfListMessage = 'No more data available';
 
   // Navigation Cards
   static const String part1Title = 'Part 1: Rewritten Earnings Screen';
